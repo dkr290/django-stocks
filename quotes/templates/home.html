@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<br/><br/>
+
+{% if api %}
+    {% if  api == "Error" %}
+    There was a problem with the search, please try again
+    {% else %}
+     {% for key, value in api.items %}
+
+     {{ key }}: {{ value }} <br/>
+     
+     {% endfor %}
+
+    {% endif %}
+
+
+
+{% endif %}  
+
+
+
+{% endblock %}
